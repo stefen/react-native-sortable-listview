@@ -385,7 +385,7 @@ class SortableListView extends React.Component {
       <Component
         {...this.props}
         activeDivider={this.renderActiveDivider()}
-        key={index}
+        key={this.props.overrideKey ? this.props.overrideKey(data) : index}
         active={active || isActiveRow}
         list={this}
         ref={view => {
